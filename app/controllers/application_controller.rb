@@ -22,9 +22,9 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
-    @user = User.find_by_id(session[:user_id])
+    @user = User.find_by_id(session[:user_id])c
     if @user
-      erb: account
+      erb :account
     else
       erb :error
     end
